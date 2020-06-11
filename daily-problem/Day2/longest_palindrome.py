@@ -1,6 +1,6 @@
 class Solution:
     # Checks if the word is a Palindrome
-    def isPalindrome(self, s):
+    def isPalindromic(self, s):
         i = 0
         j = 0
         for i in range(len(s)):
@@ -21,7 +21,7 @@ class Solution:
             # The for will check each word
             for index in range(len(combination_list)):
                 word = combination_list[index]
-                if Solution().isPalindrome(word):
+                if Solution().isPalindromic(word):
                     return word
                 if max_len > 2:
                     # Each new word will be formed removing the last and first letter from the string
