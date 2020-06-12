@@ -33,6 +33,6 @@ class Solution:
         return s[0]
 
 # Test program
-s = "tracecars"
+s = "aaaaaaaaaa"
 print(str(Solution().longestPalindrome(s)))
 # racecar
