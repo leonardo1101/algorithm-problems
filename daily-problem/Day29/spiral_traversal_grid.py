@@ -21,6 +21,7 @@ def matrix_spiral_print(M):
     run_circle = 0
     spiral_list = []
 
+    # The while will run all the circles in the matrix
     while run_circle < times_run_row and run_circle < times_run_col:
 
         # First for will go to the top left to the top right
@@ -31,10 +32,12 @@ def matrix_spiral_print(M):
         for j in range(start_pos + 1, max_row):
             spiral_list.append(M[j][max_column - 1])
 
+        # Third for will go to the bot right to the bot left
         if max_row > 1:
             for j in range(max_column - 2, start_pos - 1, -1):
                 spiral_list.append(M[max_row - 1][j])
 
+        # Fourth for will go to the bot left to the top left
         if max_column > 1:
             for j in range(max_row - 2, start_pos, -1):
                 spiral_list.append(M[j][start_pos])
