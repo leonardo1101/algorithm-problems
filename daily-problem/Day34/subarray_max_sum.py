@@ -11,13 +11,10 @@ def max_subarray_sum(arr):
     max_sum = None
 
     for i in range(len_arr):
-        if arr[i] < 0:
-            last_sum += arr[i]
+        if last_sum < 0:
+            last_sum = arr[i]
         else:
-            if last_sum < 0:
-                last_sum = arr[i]
-            else:
-                last_sum += arr[i]
+            last_sum += arr[i]
 
         if max_sum < last_sum or max_sum == None:
             max_sum = last_sum
