@@ -31,7 +31,7 @@ def createBalancedBST(nums):
     if len_nums == 0:
         return None
 
-    mid = len_nums/2
+    mid = len_nums//2
     node = Node(nums[mid])
     node.right = createBalancedBST(nums[mid + 1: len_nums])
     node.left = createBalancedBST(nums[0:mid])
